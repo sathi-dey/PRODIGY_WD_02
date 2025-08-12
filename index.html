@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stopwatch App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- DARK MODE TOGGLE -->
+  <div class="theme-toggle">
+    <label class="switch">
+      <input type="checkbox" id="toggleTheme" onchange="toggleDarkMode()" />
+      <span class="slider round"></span>
+    </label>
+  </div>
+
+  <!-- MAIN CONTAINER -->
+  <div class="container">
+    <h1>⏱️ Time Tracker</h1>
+
+    <!-- USER NAME INPUT -->
+    <div class="name-input">
+      <input type="text" id="userName" placeholder="Enter your name" />
+      <button onclick="saveUserName()">Save</button>
+    </div>
+
+    <div id="user-display" style="margin: 10px 0; font-weight: bold;"></div>
+
+    <!-- DISPLAY TIMER -->
+    <div id="display" class="glow">00:00:00</div>
+
+    <!-- BUTTONS -->
+    <div class="buttons">
+      <button onclick="startStopwatch()">Start</button>
+      <button onclick="pauseStopwatch()">Pause</button>
+      <button onclick="resetStopwatch()">Reset</button>
+      <button onclick="recordLap()">Lap</button>
+    </div>
+
+    <!-- LAPS -->
+    <h3>Lap Records:</h3>
+    <ul id="laps"></ul>
+
+    <!-- TOGGLE DASHBOARD BUTTON -->
+    <div style="text-align:center; margin-top: 20px;">
+      <button onclick="toggleDashboard()" class="dashboard-btn">Show Dashboard</button>
+    </div>
+
+    <!-- DASHBOARD SECTION -->
+    <div id="dashboardContainer" class="dashboard hidden">
+      <h2>User Dashboard</h2>
+      <table id="dashboardTable">
+        <thead>
+          <tr>
+            <th>User</th>
+            <th>Total Time</th>
+            <th>Last Session</th>
+             <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- JS will populate this -->
+        </tbody>
+      </table>
+    </div>
+    <!-- Clear Button -->
+<div style="text-align:center; margin-top: 15px;">
+  <button onclick="clearDashboard()" class="dashboard-btn" style="background-color: #dc3545;">Clear All Data</button>
+</div>
+
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>
