@@ -25,7 +25,7 @@ It is a fully functional **Stopwatch Web Application** built using **HTML, CSS, 
 *(Add a screenshot or GIF here if you have one)*
 
 ## 🔗 Live Demo
-[Click here to view the Stopwatch Web Application](https://yourusername.github.io/Stopwatch-Task02/)
+[Click here to view the Stopwatch Web Application](https://sathi-dey.github.io/PRODIGY_WD_02//)
 
 ---
 
